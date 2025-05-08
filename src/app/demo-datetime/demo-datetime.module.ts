@@ -16,7 +16,7 @@ import { RouterModule, Routes } from "@angular/router";
 import {
   NgxMatDatetimePickerModule,
   NgxMatNativeDateModule,
-} from "../../../projects/datetime-picker/src/public-api";
+} from "../../../projects/datetime-picker-v2/src/public-api";
 import { SharedModule } from "../shared";
 import { DemoDatetimeComponent } from "./demo-datetime.component";
 import { MatTabsModule } from "@angular/material/tabs";

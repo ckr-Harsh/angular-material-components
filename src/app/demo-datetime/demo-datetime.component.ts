@@ -1,10 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { FormControl } from "@angular/forms";
 import { ThemePalette } from "@angular/material/core";
-import {
-  NgxMatDatetimePickerModule,
-  NgxMatTimepickerComponent,
-} from "projects/datetime-picker/src";
 
 @Component({
   selector: "app-demo-datetime",

@@ -1,28 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormControl, Validators } from '@angular/forms';
-import { ThemePalette } from '@angular/material/core';
-import { Color } from 'projects/color-picker/src/public-api';
+import { Component, OnInit } from "@angular/core";
+import { AbstractControl, FormControl, Validators } from "@angular/forms";
+import { ThemePalette } from "@angular/material/core";
+import { Color } from "projects/color-picker-v2/src/public-api";
 
 @Component({
-    selector: 'ngx-mat-demo-colorpicker',
-    templateUrl: './demo-colorpicker.component.html',
-    styleUrls: ['./demo-colorpicker.component.scss'],
-    standalone: false
+  selector: "ngx-mat-demo-colorpicker",
+  templateUrl: "./demo-colorpicker.component.html",
+  styleUrls: ["./demo-colorpicker.component.scss"],
+  standalone: false,
 })
 export class DemoColorpickerComponent implements OnInit {
-
   public disabled = false;
-  public color: ThemePalette = 'primary';
+  public color: ThemePalette = "primary";
   public touchUi = false;
 
-  colorCtr: AbstractControl = new FormControl(new Color(0, 255, 255), [Validators.required]);
+  colorCtr: AbstractControl = new FormControl(new Color(0, 255, 255), [
+    Validators.required,
+  ]);
 
   public options = [
-    { value: true, label: 'True' },
-    { value: false, label: 'False' }
+    { value: true, label: "True" },
+    { value: false, label: "False" },
   ];
 
-  public listColors = ['primary', 'accent', 'warn'];
+  public listColors = ["primary", "accent", "warn"];
 
   public code3 = `<mat-form-field>
   <input matInput [ngxMatColorPicker]="picker" [formControl]="colorCtr" [disabled]="disabled">
@@ -32,11 +33,9 @@ export class DemoColorpickerComponent implements OnInit {
 
   public code6 = `
 import { Color } from '@angular-material-components/color-picker';
-colorCtr: AbstractControl = new FormControl(new Color(255, 243, 0), [Validators.required]);`
+colorCtr: AbstractControl = new FormControl(new Color(255, 243, 0), [Validators.required]);`;
 
-
-  public code1 = 'npm install --save @angular-material-components/color-picker';
-
+  public code1 = "npm install --save @angular-material-components/color-picker";
 
   public code2 = `import { MAT_COLOR_FORMATS, NgxMatColorPickerModule, NGX_MAT_COLOR_FORMATS } 
   from '@angular-material-components/color-picker'
@@ -54,8 +53,7 @@ colorCtr: AbstractControl = new FormControl(new Color(255, 243, 0), [Validators.
  })
  export class AppModule { }`;
 
-  public code4 =
-    `export const CUSTOM_MAT_COLOR_FORMATS: MatColorFormats = {
+  public code4 = `export const CUSTOM_MAT_COLOR_FORMATS: MatColorFormats = {
     display: {
         colorInput: 'hex'
     }
@@ -70,7 +68,8 @@ colorCtr: AbstractControl = new FormControl(new Color(255, 243, 0), [Validators.
   })
 export class AppModule { }`;
 
-  public code5 = '<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">';
+  public code5 =
+    '<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">';
 
   public code7 = `<mat-form-field>
   <input matInput [ngxMatColorPicker]="pickerCustomIcon" [formControl]="colorCtr" [disabled]="disabled">
@@ -80,10 +79,9 @@ export class AppModule { }`;
   <ngx-mat-color-picker #pickerCustomIcon [touchUi]="touchUi" [color]="color"></ngx-mat-color-picker>
 </mat-form-field>`;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onDisabledChanged(value: boolean) {
     if (!value) {
@@ -92,5 +90,4 @@ export class AppModule { }`;
       this.colorCtr.disable();
     }
   }
-
 }

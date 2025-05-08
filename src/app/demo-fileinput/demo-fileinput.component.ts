@@ -1,20 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { ThemePalette } from '@angular/material/core';
-import { FormControl, Validators } from '@angular/forms';
-import { AcceptValidator, MaxSizeValidator } from '../../../projects/file-input/src';
+import { Component, OnInit } from "@angular/core";
+import { ThemePalette } from "@angular/material/core";
+import { FormControl, Validators } from "@angular/forms";
+import {
+  AcceptValidator,
+  MaxSizeValidator,
+} from "../../../projects/file-input-v2/src";
 
 const presetFiles = [new File([], "file 1"), new File([], "file 2")];
 const presetFile = new File([], "file 1");
 
 @Component({
-    selector: 'app-demo-fileinput',
-    templateUrl: './demo-fileinput.component.html',
-    styleUrls: ['./demo-fileinput.component.scss'],
-    standalone: false
+  selector: "app-demo-fileinput",
+  templateUrl: "./demo-fileinput.component.html",
+  styleUrls: ["./demo-fileinput.component.scss"],
+  standalone: false,
 })
 export class DemoFileInputComponent implements OnInit {
-
-  color: ThemePalette = 'primary';
+  color: ThemePalette = "primary";
   disabled: boolean = false;
   multiple: boolean = false;
   accept: string;
@@ -24,16 +26,16 @@ export class DemoFileInputComponent implements OnInit {
   file3Control: FormControl;
 
   public options = [
-    { value: true, label: 'True' },
-    { value: false, label: 'False' }
+    { value: true, label: "True" },
+    { value: false, label: "False" },
   ];
 
-  public listColors = ['primary', 'accent', 'warn'];
+  public listColors = ["primary", "accent", "warn"];
   public listAccepts = [
     null,
     ".png",
     "image/*",
-    ".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    ".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document",
   ];
 
   public files;
@@ -69,7 +71,8 @@ export class DemoFileInputComponent implements OnInit {
   })
   export class AppModule { }`;
 
-  public code6 = '<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">';
+  public code6 =
+    '<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">';
 
   maxSize = 16;
   nbFiles = 0;
@@ -77,8 +80,8 @@ export class DemoFileInputComponent implements OnInit {
   constructor() {
     this.fileControl = new FormControl(this.files, [
       Validators.required,
-      MaxSizeValidator(this.maxSize * 1024)
-    ])
+      MaxSizeValidator(this.maxSize * 1024),
+    ]);
 
     this.file2Control = new FormControl(this.files);
 
@@ -92,7 +95,7 @@ export class DemoFileInputComponent implements OnInit {
       } else {
         this.files = files;
       }
-    })
+    });
 
     this.file3Control.valueChanges.subscribe((files: any) => {
       let data: any;
@@ -102,7 +105,7 @@ export class DemoFileInputComponent implements OnInit {
         data = files;
       }
       this.nbFiles = data.length;
-    })
+    });
   }
 
   onDisabledChanged(value: boolean) {
@@ -112,5 +115,4 @@ export class DemoFileInputComponent implements OnInit {
       this.fileControl.disable();
     }
   }
-
 }

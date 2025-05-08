@@ -14,11 +14,10 @@ import {
   NgxMatDatetimePickerModule,
   NgxMatNativeDateModule,
   NgxMatTimepickerComponent,
-} from "../../../projects/datetime-picker/src/public-api";
+} from "../../../projects/datetime-picker-v2/src/public-api";
 import { SharedModule } from "../shared";
 import { DemoTimeComponent } from "./demo-time.component";
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from "@angular/material/form-field";
-import { DemoDatetimeComponent } from "../demo-datetime/demo-datetime.component";
 
 const routes: Routes = [{ path: "", component: DemoTimeComponent }];
 
