@@ -1,4 +1,4 @@
-# Angular Material Extra Components (DatetimePicker, TimePicker, ColorPicker, FileInput ...) for @angular/material 7.x, 8.x, 9.x, 10.x, 11.x, 12.x, 13.x, 14.x, 15.x, 16.x
+# Angular Material Extra Components (DatetimePicker, TimePicker, ColorPicker, FileInput ...) for @angular/material 17.x, 18.x, 19.x
 
 [![Build Status](https://travis-ci.com/h2qutc/angular-material-components.svg?branch=master)](https://travis-ci.com/h2qutc/angular-material-components)
 [![License](https://img.shields.io/npm/l/angular-material-components.svg)](https://www.npmjs.com/package/angular-material-components)
@@ -13,32 +13,9 @@ Angular Material Library provide extra components for every project (Datetime pi
 
 Please do not hesitate to contact us if you have any question or suggestion.
 
-Feel free to open the [issues](https://github.com/h2qutc/angular-material-components/issues) or provide a PR.
-
-If you like this project, support angular-material-components by starring⭐.
-
-And thank you so much for your coffee ❤️
-
-<a href="https://www.buymeacoffee.com/h2qutc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
 ## DEMO Angular Material Components
 
 @see [LIVE DEMO AND DOCUMENTATION](https://h2qutc.github.io/angular-material-components/)
-
-Choose the version corresponding to your Angular version:
-
-| Angular | @angular-material-components/datetime-picker |
-| ------- | -------------------------------------------- |
-| 16      | 16.x+                                        |
-| 15      | 15.x+ OR 9.x+ for legacy import              |
-| 14      | 8.x+                                         |
-| 13      | 7.x+                                         |
-| 12      | 6.x+                                         |
-| 11      | 5.x+                                         |
-| 10      | 4.x+                                         |
-| 9       | 2.x+                                         |
-| 8       | 2.x+                                         |
-| 7       | 2.x+                                         |
 
 ### Datetime Picker
 
@@ -50,12 +27,6 @@ Choose the version corresponding to your Angular version:
 ```
 npm install --save  @angular-material-components/datetime-picker
 ```
-
-![Alt Text](demo_datetime_picker.png)
-
-@see [DEMO stackblitz for Angular 7, Angular 8](https://stackblitz.com/edit/demo-ngx-mat-datetime-picker)
-
-@see [DEMO stackblitz for Angular 9](https://stackblitz.com/edit/demo-ngx-mat-datetime-picker-angular9)
 
 ### Color Picker
 
