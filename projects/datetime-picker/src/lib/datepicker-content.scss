@@ -1,6 +1,7 @@
 $calendar-padding: 8px;
 $non-touch-calendar-cell-size: 40px;
-$non-touch-calendar-width: $non-touch-calendar-cell-size * 7 + $calendar-padding * 2;
+$non-touch-calendar-width: $non-touch-calendar-cell-size * 7 + $calendar-padding *
+  2;
 // Based on the natural height of the calendar in a month with 6 rows of dates
 // (largest the calendar will get).
 $non-touch-calendar-height: 354px;
@@ -19,7 +20,6 @@ $touch-min-width: 250px;
 $touch-min-height: 312px;
 $touch-max-width: 750px;
 $touch-max-height: 815px;
-
 
 .mat-datepicker-content {
   display: block;
@@ -59,7 +59,9 @@ $touch-max-height: 815px;
 
   // Ensures that `mat-datepicker-actions` is pushed to the bottom of the popup.
   justify-content: space-between;
-
+  background: darken($color: #fff, $amount: 10);
+  border-radius: 6px;
+  margin-top: 0.2rem;
 }
 
 .time-container {
@@ -77,7 +79,7 @@ $touch-max-height: 815px;
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -132,7 +134,7 @@ $touch-max-height: 815px;
         height: auto;
         max-height: 870px;
 
-        &.mat-datepicker-content-container-with-actions{
+        &.mat-datepicker-content-container-with-actions {
           max-height: none !important;
         }
       }

@@ -1,4 +1,4 @@
-# Angular Material DatetimePicker, Timepicker for @angular/material 7.x, 8.x, 9.x, 10.x, 11.x, 12.x, 13.x, 14.x, 15.x, 16.x
+# Angular Material DatetimePicker, Timepicker for @angular/material 17.x, 18.x, 19.x
 
 [![Build Status](https://travis-ci.com/h2qutc/angular-material-components.svg?branch=master)](https://travis-ci.com/h2qutc/angular-material-components)
 [![License](https://img.shields.io/npm/l/angular-material-components.svg)](https://www.npmjs.com/package/angular-material-components)
@@ -13,13 +13,9 @@ A DatetimePicker like @angular/material [Datepicker](https://material.angular.io
 
 - Only changes in this version is that it supports latest angular versions.
 
-<a href="https://www.buymeacoffee.com/h2qutc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
 ## DEMO
 
 @see [LIVE DEMO AND DOCUMENTATION](https://h2qutc.github.io/angular-material-components/)
-
-@see [DEMO stackblitz](https://stackblitz.com/edit/demo-ngx-mat-datetime-picker)
 
 ![Alt Text](demo_datetime_picker.png)
 
@@ -28,8 +24,8 @@ Choose the version corresponding to your Angular version:
 | Angular | @angular-material-components/datetime-picker |
 | ------- | -------------------------------------------- |
 | 19      | 19.x+                                        |
-| 18      | 19.x+                                        |
-| 17      | 19.x+                                        |
+| 18      | 18.x+                                        |
+| 17      | 17.x+                                        |
 
 ## Getting started
 
@@ -42,7 +38,7 @@ npm install --save  @angular-material-components/datetime-picker
 Basically the same way the @angular/material Datepicker is configured and imported.
 
 ```ts
-import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
+import { NgxMatDatetimePickerModule, NgxMatTimepickerComponent } from '@angular-material-components/datetime-picker';
 @NgModule({
    ...
    imports: [
@@ -51,7 +47,7 @@ import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-mat
       BrowserAnimationsModule,
       MatDatepickerModule,
       MatInputModule,
-      NgxMatTimepickerModule,
+      NgxMatTimepickerComponent,
       FormsModule,
       ReactiveFormsModule,
       MatButtonModule,
@@ -123,7 +119,7 @@ The easiest way to ensure this is to import one of the provided date modules:
 
 To use NgxMatMomentModule:
 
-```
+```sh
 npm install --save  @angular-material-components/moment-adapter
 ```
 
@@ -135,7 +131,7 @@ For example:
 
 Creating a custom date adapter:
 
-```
+```ts
 @Injectable()
 export class CustomDateAdapter extends NgxMatDateAdapter<D> {...}
 // D can be Date, Moment or customized type
@@ -143,39 +139,37 @@ export class CustomDateAdapter extends NgxMatDateAdapter<D> {...}
 
 Creating a custom date adapter module
 
-```
+```ts
 @NgModule({
   providers: [
     {
       provide: NgxMatDateAdapter,
       useClass: CustomDateAdapter,
-      deps: [MAT_DATE_LOCALE, NGX_MAT_MOMENT_DATE_ADAPTER_OPTIONS]
-    }
+      deps: [MAT_DATE_LOCALE, NGX_MAT_MOMENT_DATE_ADAPTER_OPTIONS],
+    },
   ],
 })
-export class CustomDateModule { }
+export class CustomDateModule {}
 ```
 
 You can also customize the date format by providing your custom NGX_MAT_DATE_FORMATS in your module.
 
-```
+```ts
 // If using Moment
 const CUSTOM_DATE_FORMATS: NgxMatDateFormats = {
   parse: {
-    dateInput: "l, LTS"
+    dateInput: "l, LTS",
   },
   display: {
     dateInput: "l, LTS",
     monthYearLabel: "MMM YYYY",
     dateA11yLabel: "LL",
-    monthYearA11yLabel: "MMMM YYYY"
-  }
+    monthYearA11yLabel: "MMMM YYYY",
+  },
 };
 
 //and in the module providers
-providers: [
-    { provide: NGX_MAT_DATE_FORMATS, useValue: CUSTOM_MOMENT_FORMATS }
-  ]
+providers: [{ provide: NGX_MAT_DATE_FORMATS, useValue: CUSTOM_MOMENT_FORMATS }];
 ```
 
 ## Theming
@@ -183,8 +177,8 @@ providers: [
 - @see @angular/material [Using a pre-built theme](https://material.angular.io/guide/theming#using-a-pre-built-theme)
 - Add the Material Design icon font to your index.html
 
-```
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+```html
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet" />
 ```
 
 ## License
