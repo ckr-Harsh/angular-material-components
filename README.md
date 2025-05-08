@@ -5,6 +5,10 @@
 
 ## Description
 
+**This is a cloned/forked version of an existing pkg by :- [hqho](https://github.com/h2qutc)**
+
+- Only changes in this version is that it supports latest angular versions.
+
 Angular Material Library provide extra components for every project (Datetime picker, Time picker, Color picker...).
 
 Please do not hesitate to contact us if you have any question or suggestion.
@@ -13,7 +17,7 @@ Feel free to open the [issues](https://github.com/h2qutc/angular-material-compon
 
 If you like this project, support angular-material-components by starring⭐.
 
-And thank you so much for your coffee ❤️ 
+And thank you so much for your coffee ❤️
 
 <a href="https://www.buymeacoffee.com/h2qutc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
@@ -23,19 +27,18 @@ And thank you so much for your coffee ❤️
 
 Choose the version corresponding to your Angular version:
 
- Angular     | @angular-material-components/datetime-picker
- ----------- | -------------------
- 16          | 16.x+
- 15          | 15.x+ OR 9.x+ for legacy import
- 14          | 8.x+
- 13          | 7.x+
- 12          | 6.x+
- 11          | 5.x+
- 10          | 4.x+
- 9           | 2.x+
- 8           | 2.x+
- 7           | 2.x+
-
+| Angular | @angular-material-components/datetime-picker |
+| ------- | -------------------------------------------- |
+| 16      | 16.x+                                        |
+| 15      | 15.x+ OR 9.x+ for legacy import              |
+| 14      | 8.x+                                         |
+| 13      | 7.x+                                         |
+| 12      | 6.x+                                         |
+| 11      | 5.x+                                         |
+| 10      | 4.x+                                         |
+| 9       | 2.x+                                         |
+| 8       | 2.x+                                         |
+| 7       | 2.x+                                         |
 
 ### Datetime Picker
 
@@ -81,13 +84,15 @@ npm install --save  @angular-material-components/file-input
 
 ![Alt Text](demo_file_input.png)
 
-
 ### Theming
+
 - @see @angular/material [Using a pre-built theme](https://material.angular.io/guide/theming#using-a-pre-built-theme)
 - Add the Material Design icon font to your index.html
+
 ```
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
 ```
 
 ## License
+
 MIT
