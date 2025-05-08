@@ -9,6 +9,10 @@
 
 A DatetimePicker like @angular/material [Datepicker](https://material.angular.io/components/datepicker/overview) by adding support for choosing time.
 
+**This is a cloned/forked version of an [existing pkg](https://www.npmjs.com/package/@angular-material-components/datetime-picker) by :- [hqho](https://github.com/h2qutc)**
+
+- Only changes in this version is that it supports latest angular versions.
+
 <a href="https://www.buymeacoffee.com/h2qutc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## DEMO
@@ -21,29 +25,23 @@ A DatetimePicker like @angular/material [Datepicker](https://material.angular.io
 
 Choose the version corresponding to your Angular version:
 
- Angular     | @angular-material-components/datetime-picker
- ----------- | -------------------
- 16          | 16.x+
- 15          | 15.x+ OR 9.x+ for legacy import
- 14          | 8.x+
- 13          | 7.x+
- 12          | 6.x+
- 11          | 5.x+
- 10          | 4.x+
- 9           | 2.x+
- 8           | 2.x+
- 7           | 2.x+
+| Angular | @angular-material-components/datetime-picker |
+| ------- | -------------------------------------------- |
+| 19      | 19.x+                                        |
+| 18      | 19.x+                                        |
+| 17      | 19.x+                                        |
 
 ## Getting started
 
-```
+```sh
 npm install --save  @angular-material-components/datetime-picker
 ```
 
 ## Setup
+
 Basically the same way the @angular/material Datepicker is configured and imported.
 
-```
+```ts
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
 @NgModule({
    ...
@@ -63,7 +61,6 @@ import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-mat
 })
 export class AppModule { }
 ```
-@see [src/app/demo-datetime/demo-datetime.module.ts](src/app/demo-datetime/demo-datetime.module.ts)
 
 ## Using the component
 
@@ -71,22 +68,17 @@ The same API as @angular/material Datepicker (@see [API docs](https://material.a
 
 ### Datetime Picker (ngx-mat-datetime-picker)
 
-```
+```html
 <mat-form-field>
-   <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date" [formControl]="dateControl"
-      [min]="minDate" [max]="maxDate" [disabled]="disabled">
-   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-   <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
-      [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
-      [touchUi]="touchUi" [color]="color" [enableMeridian]="enableMeridian" 
-      [disableMinute]="disableMinute" [hideTime]="hideTime">
-   </ngx-mat-datetime-picker>
+  <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date" [formControl]="dateControl" [min]="minDate" [max]="maxDate" [disabled]="disabled" />
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds" [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond" [touchUi]="touchUi" [color]="color" [enableMeridian]="enableMeridian" [disableMinute]="disableMinute" [hideTime]="hideTime"> </ngx-mat-datetime-picker>
 </mat-form-field>
 ```
 
 ### Timepicker (ngx-mat-timepicker)
 
-```
+```html
 <ngx-mat-timepicker [(ngModel)]="date"></ngx-mat-timepicker>
 <ngx-mat-timepicker [(ngModel)]="date" [disabled]="disabled"></ngx-mat-timepicker>
 <ngx-mat-timepicker [(ngModel)]="date" [stepHour]="2" [stepMinute]="5" [stepSecond]="10"></ngx-mat-timepicker>
@@ -99,22 +91,22 @@ The same API as @angular/material Datepicker (@see [API docs](https://material.a
 
 #### List of @Input of ngx-mat-timepicker
 
-*You can use all @Input of ngx-mat-timepicker for ngx-mat-datetime-picker*
+_You can use all @Input of ngx-mat-timepicker for ngx-mat-datetime-picker_
 
-| @Input        	| Type     	| Default value 	| Description                                                          	|
-|---------------	|----------	|---------------	|----------------------------------------------------------------------	|
-| **disabled**      	| boolean  	| null          	| If true, the picker is readonly and can't be modified                	|
-| **showSpinners**  	| boolean  	| true          	| If true, the spinners above and below input are visible              	|
-| **showSeconds** 	| boolean  	| true          	| If true, it is not possible to select seconds                        	|
-| **disableMinute** 	| boolean  	| false          	| If true, the minute (and second) is readonly                        	|
-| **defaultTime** 	| Array  	| undefined          	| An array [hour, minute, second] for default time when the date is not yet defined                        	|
-| **stepHour**      	| number   	| 1             	| The number of hours to add/substract when clicking hour spinners     	|
-| **stepMinute**    	| number   	| 1             	| The number of minutes to add/substract when clicking minute spinners 	|
-| **stepSecond**    	| number   	| 1             	| The number of seconds to add/substract when clicking second spinners 	|
-| **color**    	   | ThemePalette   	| undefined             	| Color palette to use on the datepicker's calendar. 	|
-| **enableMeridian** | boolean   	| false             	| Whether to display 12H or 24H mode. 	|
-| **hideTime** | boolean   	| false             	| If true, the time is hidden. 	|
-| **touchUi**    	   | boolean   | false           | Whether the calendar UI is in touch mode. In touch mode the calendar opens in a dialog rather than a popup and elements have more padding to allow for bigger touch targets. 	|
+| @Input             | Type         | Default value | Description                                                                                                                                                                  |
+| ------------------ | ------------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **disabled**       | boolean      | null          | If true, the picker is readonly and can't be modified                                                                                                                        |
+| **showSpinners**   | boolean      | true          | If true, the spinners above and below input are visible                                                                                                                      |
+| **showSeconds**    | boolean      | true          | If true, it is not possible to select seconds                                                                                                                                |
+| **disableMinute**  | boolean      | false         | If true, the minute (and second) is readonly                                                                                                                                 |
+| **defaultTime**    | Array        | undefined     | An array [hour, minute, second] for default time when the date is not yet defined                                                                                            |
+| **stepHour**       | number       | 1             | The number of hours to add/substract when clicking hour spinners                                                                                                             |
+| **stepMinute**     | number       | 1             | The number of minutes to add/substract when clicking minute spinners                                                                                                         |
+| **stepSecond**     | number       | 1             | The number of seconds to add/substract when clicking second spinners                                                                                                         |
+| **color**          | ThemePalette | undefined     | Color palette to use on the datepicker's calendar.                                                                                                                           |
+| **enableMeridian** | boolean      | false         | Whether to display 12H or 24H mode.                                                                                                                                          |
+| **hideTime**       | boolean      | false         | If true, the time is hidden.                                                                                                                                                 |
+| **touchUi**        | boolean      | false         | Whether the calendar UI is in touch mode. In touch mode the calendar opens in a dialog rather than a popup and elements have more padding to allow for bigger touch targets. |
 
 ## Choosing a date implementation and date format settings
 
@@ -122,17 +114,18 @@ The datepicker was built to be date implementation agnostic. This means that it 
 
 The easiest way to ensure this is to import one of the provided date modules:
 
-|                       	| **NgxMatNativeDateModule** 	| **NgxMatMomentModule**                                                              	|
-|-----------------------	|----------------------------	|-------------------------------------------------------------------------------------	|
-| **Date type**         	| Date                       	| Moment                                                                              	|
-| **Supported locales** 	| en-US                      	| [See project for details](https://github.com/moment/moment/tree/develop/src/locale) 	|
-| **Dependencies**      	| None                       	| [Moment.js](https://momentjs.com/)                                                  	|
-| **Import from**       	| @angular-material-components/datetime-picker    	| [@angular-material-components/moment-adapter](https://www.npmjs.com/package/@angular-material-components/moment-adapter)      	|
+|                       | **NgxMatNativeDateModule**                   | **NgxMatMomentModule**                                                                                                   |
+| --------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **Date type**         | Date                                         | Moment                                                                                                                   |
+| **Supported locales** | en-US                                        | [See project for details](https://github.com/moment/moment/tree/develop/src/locale)                                      |
+| **Dependencies**      | None                                         | [Moment.js](https://momentjs.com/)                                                                                       |
+| **Import from**       | @angular-material-components/datetime-picker | [@angular-material-components/moment-adapter](https://www.npmjs.com/package/@angular-material-components/moment-adapter) |
 
-To use NgxMatMomentModule: 
-   ```
-   npm install --save  @angular-material-components/moment-adapter
-   ```
+To use NgxMatMomentModule:
+
+```
+npm install --save  @angular-material-components/moment-adapter
+```
 
 Please note: NgxMatNativeDateModule is based off the functionality available in JavaScript's native Date object. Thus it is not suitable for many locales. One of the biggest shortcomings of the native Date object is the inability to set the parse format.
 
@@ -149,6 +142,7 @@ export class CustomDateAdapter extends NgxMatDateAdapter<D> {...}
 ```
 
 Creating a custom date adapter module
+
 ```
 @NgModule({
   providers: [
@@ -178,18 +172,21 @@ const CUSTOM_DATE_FORMATS: NgxMatDateFormats = {
   }
 };
 
-//and in the module providers 
+//and in the module providers
 providers: [
     { provide: NGX_MAT_DATE_FORMATS, useValue: CUSTOM_MOMENT_FORMATS }
   ]
 ```
 
 ## Theming
+
 - @see @angular/material [Using a pre-built theme](https://material.angular.io/guide/theming#using-a-pre-built-theme)
 - Add the Material Design icon font to your index.html
+
 ```
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
 ```
 
 ## License
+
 MIT
