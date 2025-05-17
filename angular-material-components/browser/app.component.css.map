@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/app.component.scss"],
+  "sourcesContent": [".app-content {\r\n  padding: 20px;\r\n}\r\n\r\n:host {\r\n  ::ng-deep mat-sidenav-container {\r\n    mat-sidenav {\r\n      .mat-mdc-nav-list {\r\n        padding: 0;\r\n\r\n        .sidebar-item {\r\n          .mdc-list-item__content {\r\n            .mdc-list-item__primary-text {\r\n              display: flex;\r\n              align-items: center;\r\n              column-gap: 8px;\r\n            }\r\n          }\r\n\r\n          &.active {\r\n            background-color: #009B77;\r\n\r\n            .mdc-list-item__content {\r\n              .mdc-list-item__primary-text {\r\n                color: white;\r\n              }\r\n            }\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA;;AAMI,MAAA,UAAA,sBAAA,YAAA,CAAA;AACE,WAAA;;AAII,MAAA,UAAA,sBAAA,YAAA,CALN,iBAKM,CAAA,aAAA,CAAA,uBAAA,CAAA;AACE,WAAA;AACA,eAAA;AACA,cAAA;;AAIJ,MAAA,UAAA,sBAAA,YAAA,CAZJ,iBAYI,CAPE,YAOF,CAAA;AACE,oBAAA;;AAGE,MAAA,UAAA,sBAAA,YAAA,CAhBR,iBAgBQ,CAXF,YAWE,CAJJ,OAII,CAXF,uBAWE,CAXF;AAYI,SAAA;;",
+  "names": []
+}

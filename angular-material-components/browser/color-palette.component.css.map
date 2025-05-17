@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["projects/color-picker-v2/src/lib/components/color-palette/color-palette.component.scss"],
+  "sourcesContent": [".ngx-mat-color-palette {\r\n  .actions {\r\n    margin-top: 10px;\r\n    display: flex;\r\n    .left {\r\n      display: flex;\r\n      flex-direction: column;\r\n      margin-right: 15px;\r\n      .preview {\r\n        flex: 2 1 auto;\r\n        margin-bottom: 10px;\r\n      }\r\n    }\r\n\r\n    .right {\r\n      display: flex;\r\n      width: 60px;\r\n      flex-direction: column;\r\n    }\r\n  }\r\n}\r\n"],
+  "mappings": ";AACE,CAAA,sBAAA,CAAA;AACE,cAAA;AACA,WAAA;;AACA,CAHF,sBAGE,CAHF,QAGE,CAAA;AACE,WAAA;AACA,kBAAA;AACA,gBAAA;;AACA,CAPJ,sBAOI,CAPJ,QAOI,CAJF,KAIE,CAAA;AACE,QAAA,EAAA,EAAA;AACA,iBAAA;;AAIJ,CAbF,sBAaE,CAbF,QAaE,CAAA;AACE,WAAA;AACA,SAAA;AACA,kBAAA;;",
+  "names": []
+}

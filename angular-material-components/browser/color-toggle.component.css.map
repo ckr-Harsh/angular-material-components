@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["projects/color-picker-v2/src/lib/components/color-toggle/color-toggle.component.scss"],
+  "sourcesContent": [".mat-form-field-appearance {\r\n    .mat-form-field-prefix,\r\n    .mat-form-field-suffix {\r\n      .ngx-mat-color-toggle-default-icon {\r\n        width: 1em;\r\n      }\r\n    }\r\n  }\r\n  \r\n  .mat-form-field:not(.mat-form-field-appearance) {\r\n    .mat-form-field-prefix,\r\n    .mat-form-field-suffix {\r\n      .ngx-mat-color-toggle-default-icon {\r\n        display: block;\r\n        width: 1.5em;\r\n        height: 1.5em;\r\n      }\r\n  \r\n      .mat-icon-button .ngx-mat-color-toggle-default-icon {\r\n        margin: auto;\r\n      }\r\n    }\r\n  }\r\n  "],
+  "mappings": ";AAGM,CAAA,0BAAA,CAAA,sBAAA,CAAA;AAAA,CAAA,0BAAA,CAAA,sBAAA,CAAA;AACE,SAAA;;AAQF,CAAA,cAAA,KAAA,CATA,2BASA,CATA,sBASA,CATA;AASA,CAAA,cAAA,KAAA,CATA,2BASA,CATA,sBASA,CATA;AAUE,WAAA;AACA,SAAA;AACA,UAAA;;AAGF,CANA,cAMA,KAAA,CAfA,2BAeA,CAfA,sBAeA,CAAA,gBAAA,CAfA;AAeA,CANA,cAMA,KAAA,CAfA,2BAeA,CAfA,sBAeA,CAAA,gBAAA,CAfA;AAgBE,UAAA;;",
+  "names": []
+}

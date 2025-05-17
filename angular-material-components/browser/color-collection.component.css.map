@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["projects/color-picker-v2/src/lib/components/color-collection/color-collection.component.scss"],
+  "sourcesContent": [".ngx-mat-color-collection {\r\n\t.btn-color {\r\n\t\theight: 20px;\r\n\t\twidth: 20px;\r\n\t\tmargin-right: 11px;\r\n\t\tbox-shadow: none;\r\n\t\topacity: 0.3;\r\n\r\n\t\twill-change: opacity;\r\n\t\ttransition: opacity 0.3s linear;\r\n\r\n\t\t&.active {\r\n\t\t\tbox-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);\r\n\t\t\topacity: 1;\r\n\t\t}\r\n\r\n\t\t.mat-mdc-button-touch-target {\r\n\t\t\tdisplay: none !important;\r\n\t\t}\r\n\t}\r\n\r\n\r\n}"],
+  "mappings": ";AACC,CAAA,yBAAA,CAAA;AACC,UAAA;AACA,SAAA;AACA,gBAAA;AACA,cAAA;AACA,WAAA;AAEA,eAAA;AACA,cAAA,QAAA,KAAA;;AAEA,CAVD,yBAUC,CAVD,SAUC,CAAA;AACC;IAAA,EAAA,IAAA,IAAA,KAAA,KAAA,CAAA,EAAA,CAAA,EAAA,CAAA,EAAA,IAAA;IAAA,EAAA,IAAA,KAAA,EAAA,KAAA,CAAA,EAAA,CAAA,EAAA,CAAA,EAAA,KAAA;IAAA,EAAA,IAAA,KAAA,EAAA,KAAA,CAAA,EAAA,CAAA,EAAA,CAAA,EAAA;AACA,WAAA;;AAGD,CAfD,yBAeC,CAfD,UAeC,CAAA;AACC,WAAA;;",
+  "names": []
+}

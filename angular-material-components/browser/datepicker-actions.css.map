@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["projects/datetime-picker-v2/src/lib/datepicker-actions.scss"],
+  "sourcesContent": [".mat-datepicker-actions {\r\n  $spacing: 8px;\r\n  display: flex;\r\n  justify-content: flex-end;\r\n  align-items: center;\r\n  padding: $spacing;\r\n\r\n  .mat-mdc-button-base+.mat-mdc-button-base {\r\n    margin-left: $spacing;\r\n\r\n    [dir='rtl'] & {\r\n      margin-left: 0;\r\n      margin-right: $spacing;\r\n    }\r\n  }\r\n}"],
+  "mappings": ";AAAA,CAAA;AAEE,WAAA;AACA,mBAAA;AACA,eAAA;AACA,WAJU;;AAMV,CAPF,uBAOE,CAAA,oBAAA,EAAA,CAAA;AACE,eAPQ;;AASR,CAAA,SAAA,CAVJ,uBAUI,CAHF,oBAGE,EAAA,CAHF;AAII,eAAA;AACA,gBAXM;;",
+  "names": []
+}

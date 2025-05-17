@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["projects/file-input-v2/src/lib/file-input.component.scss"],
+  "sourcesContent": [".mat-mdc-form-field-appearance-outline {\r\n\r\n  .mat-form-field-prefix,\r\n  .mat-form-field-suffix {\r\n    .ngx-mat-file-input--default-icon {\r\n      width: 1em;\r\n    }\r\n  }\r\n}\r\n\r\n.mat-mdc-form-field:not(.mat-form-field-appearance-outline) {\r\n\r\n  .mat-form-field-prefix,\r\n  .mat-form-field-suffix {\r\n    .ngx-mat-file-input--default-icon {\r\n      display: block;\r\n      width: 1.5em;\r\n      height: 1.5em;\r\n    }\r\n\r\n    .mat-icon-button .ngx-mat-file-input--default-icon {\r\n      margin: auto;\r\n    }\r\n  }\r\n}\r\n\r\n.ngx-mat-file-input {\r\n  display: flex;\r\n  line-height: 18px;\r\n  align-items: center;\r\n\r\n  .input-file {\r\n    display: block;\r\n    visibility: hidden;\r\n    width: 0;\r\n    height: 0;\r\n  }\r\n}"],
+  "mappings": ";AAII,CAAA,sCAAA,CAAA,sBAAA,CAAA;AAAA,CAAA,sCAAA,CAAA,sBAAA,CAAA;AACE,SAAA;;AASF,CAAA,kBAAA,KAAA,CAAA,mCAAA,CAVA,sBAUA,CAVA;AAUA,CAAA,kBAAA,KAAA,CAAA,mCAAA,CAVA,sBAUA,CAVA;AAWE,WAAA;AACA,SAAA;AACA,UAAA;;AAGF,CANA,kBAMA,KAAA,CANA,mCAMA,CAhBA,sBAgBA,CAAA,gBAAA,CAhBA;AAgBA,CANA,kBAMA,KAAA,CANA,mCAMA,CAhBA,sBAgBA,CAAA,gBAAA,CAhBA;AAiBE,UAAA;;AAKN,CAAA;AACE,WAAA;AACA,eAAA;AACA,eAAA;;AAEA,CALF,mBAKE,CAAA;AACE,WAAA;AACA,cAAA;AACA,SAAA;AACA,UAAA;;",
+  "names": []
+}
