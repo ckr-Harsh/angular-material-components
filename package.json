@@ -1,11 +1,11 @@
 {
-  "name": "angular-material-components",
+  "name": "angular-datetime-picker",
   "version": "19.0.1",
   "description": "Angular Material Datetime Picker",
   "author": "Harsh Choudhary",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckr-harsh/angular-material-components.git"
+    "url": "git+https://github.com/ckr-harsh/angular-material-components.git"
   },
   "bugs": {
     "url": "https://github.com/ckr-harsh/angular-material-components/issues"
@@ -29,14 +29,14 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build -c=production",
-    "build:datetime-picker": "ng build NgxMatDatetimePicker",
-    "build:moment-adapter": "ng build NgxMatMomentAdapter",
-    "build:color-picker": "ng build NgxMatColorPicker",
-    "build:file-input": "ng build NgxMatFileInput",
-    "publish:datetime-picker": "ng build NgxMatDatetimePicker && cd dist/@angular-material-components/datetime-picker-v2 && npm publish --access public && cd .. && cd .. && cd ..",
-    "publish:moment-adapter": "ng build NgxMatMomentAdapter && cd dist/@angular-material-components/moment-adapter-v2 && npm publish --access public  && cd .. && cd .. && cd ..",
-    "publish:color-picker": "ng build NgxMatColorPicker && cd dist/@angular-material-components/color-picker-v2 && npm publish --access public  && cd .. && cd .. && cd ..",
-    "publish:file-input": "ng build NgxMatFileInput && cd dist/@angular-material-components/file-input-v2 && npm publish --access public  && cd .. && cd .. && cd ..",
+    "build:datetime-picker-v2": "ng build NgxMatDatetimePicker",
+    "build:moment-adapter-v2": "ng build NgxMatMomentAdapter",
+    "build:color-picker-v2": "ng build NgxMatColorPicker",
+    "build:file-input-v2": "ng build NgxMatFileInput",
+    "publish:datetime-picker-v2": "ng build NgxMatDatetimePicker && cd dist/@angular-material-components/datetime-picker-v2 && npm publish --access public && cd .. && cd .. && cd ..",
+    "publish:moment-adapter-v2": "ng build NgxMatMomentAdapter && cd dist/@angular-material-components/moment-adapter-v2 && npm publish --access public  && cd .. && cd .. && cd ..",
+    "publish:color-picker-v2": "ng build NgxMatColorPicker && cd dist/@angular-material-components/color-picker-v2 && npm publish --access public  && cd .. && cd .. && cd ..",
+    "publish:file-input-v2": "ng build NgxMatFileInput && cd dist/@angular-material-components/file-input-v2 && npm publish --access public  && cd .. && cd .. && cd ..",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

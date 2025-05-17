@@ -1,6 +1,5 @@
 # Angular Material Extra Components (DatetimePicker, TimePicker, ColorPicker, FileInput ...) for @angular/material 17.x, 18.x, 19.x
 
-[![Build Status](https://travis-ci.com/h2qutc/angular-material-components.svg?branch=master)](https://travis-ci.com/h2qutc/angular-material-components)
 [![License](https://img.shields.io/npm/l/angular-material-components.svg)](https://www.npmjs.com/package/angular-material-components)
 
 ## Description
@@ -11,32 +10,30 @@
 
 Angular Material Library provide extra components for every project (Datetime picker, Time picker, Color picker...).
 
-Please do not hesitate to contact us if you have any question or suggestion.
-
 ## DEMO Angular Material Components
 
 @see [LIVE DEMO AND DOCUMENTATION](https://h2qutc.github.io/angular-material-components/)
 
 ### Datetime Picker
 
-[![npm version](https://badge.fury.io/js/%40angular-material-components%2Fdatetime-picker.svg)](https://www.npmjs.com/package/@angular-material-components/datetime-picker)
-[![Github All Releases](https://img.shields.io/npm/dt/@angular-material-components/datetime-picker.svg)]()
+[![npm version](https://badge.fury.io/js/ngx-mat-datetime-picker-v2.svg)](https://www.npmjs.com/package/ngx-mat-datetime-picker-v2)
+[![Github All Releases](https://img.shields.io/npm/dt/ngx-mat-datetime-picker-v2.svg)]()
 
 [TUTORIAL HERE](https://h2qutc.github.io/angular-material-components/)
 
 ```
-npm install --save  @angular-material-components/datetime-picker
+npm install --save  ngx-mat-datetime-picker-v2
 ```
 
-### Color Picker
+<!-- ### Color Picker
 
-[![npm version](https://badge.fury.io/js/%40angular-material-components%2Fcolor-picker.svg)](https://www.npmjs.com/package/@angular-material-components/color-picker)
-[![Github All Releases](https://img.shields.io/npm/dt/@angular-material-components/color-picker.svg)]()
+[![npm version](https://badge.fury.io/js/ngx-mat-color-picker-v2.svg)](https://www.npmjs.com/package/ngx-mat-color-picker-v2)
+[![Github All Releases](https://img.shields.io/npm/dt/ngx-mat-color-picker-v2.svg)]()
 
 [TUTORIAL HERE](https://h2qutc.github.io/angular-material-components/)
 
 ```
-npm install --save  @angular-material-components/color-picker
+npm install --save  ngx-mat-color-picker-v2
 ```
 
 ![Alt Text](demo_color_picker.png)
@@ -44,16 +41,16 @@ npm install --save  @angular-material-components/color-picker
 
 ### File Input
 
-[![npm version](https://badge.fury.io/js/%40angular-material-components%2Ffile-input.svg)](https://www.npmjs.com/package/@angular-material-components/file-input)
-[![Github All Releases](https://img.shields.io/npm/dt/@angular-material-components/file-input.svg)]()
+[![npm version](https://badge.fury.io/js/ngx-mat-file-input-v2.svg)](https://www.npmjs.com/package/ngx-mat-file-input-v2)
+[![Github All Releases](https://img.shields.io/npm/dt/ngx-mat-file-input-v2.svg)]()
 
 [TUTORIAL HERE](https://h2qutc.github.io/angular-material-components/)
 
 ```
-npm install --save  @angular-material-components/file-input
+npm install --save  ngx-mat-file-input-v2
 ```
 
-![Alt Text](demo_file_input.png)
+![Alt Text](demo_file_input.png) -->
 
 ### Theming
 

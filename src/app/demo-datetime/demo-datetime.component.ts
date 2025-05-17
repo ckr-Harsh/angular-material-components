@@ -13,7 +13,7 @@ export class DemoDatetimeComponent implements OnInit {
 
   public disabled = false;
   public showSpinners = true;
-  public showSeconds = false;
+  public showSeconds = true;
   public touchUi = false;
   public enableMeridian = false;
   public minDate: Date;
@@ -38,8 +38,7 @@ export class DemoDatetimeComponent implements OnInit {
   public stepMinutes = [1, 5, 10, 15, 20, 25];
   public stepSeconds = [1, 5, 10, 15, 20, 25];
 
-  public code1 =
-    "npm install --save @angular-material-components/datetime-picker";
+  public code1 = "npm install --save ngx-mat-datetime-picker-v2";
 
   public code3 = `<mat-form-field>
   <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date" [formControl]="dateControl"
@@ -55,7 +54,7 @@ export class DemoDatetimeComponent implements OnInit {
            NgxMatDatetimePickerModule, 
            NgxMatNativeDateModule, 
            NgxMatTimepickerComponent ,
-  } from '@angular-material-components/datetime-picker';
+  } from 'ngx-mat-datetime-picker-v2';
   
 @NgModule({
   imports: [

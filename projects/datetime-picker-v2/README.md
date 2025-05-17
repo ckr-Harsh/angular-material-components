@@ -1,9 +1,7 @@
 # Angular Material DatetimePicker, Timepicker for @angular/material 17.x, 18.x, 19.x
 
-[![Build Status](https://travis-ci.com/h2qutc/angular-material-components.svg?branch=master)](https://travis-ci.com/h2qutc/angular-material-components)
-[![License](https://img.shields.io/npm/l/angular-material-components.svg)](https://www.npmjs.com/package/angular-material-components)
-[![npm version](https://badge.fury.io/js/%40angular-material-components%2Fdatetime-picker.svg)](https://www.npmjs.com/package/@angular-material-components/datetime-picker)
-[![Github All Releases](https://img.shields.io/npm/dt/@angular-material-components/datetime-picker.svg)]()
+[![License](https://img.shields.io/npm/l/ngx-mat-datetime-picker-v2.svg)](https://www.npmjs.com/package/ngx-mat-datetime-picker-v2)
+[![npm version](https://badge.fury.io/js/ngx-mat-datetime-picker-v2.svg)](https://www.npmjs.com/package/ngx-mat-datetime-picker-v2)
 
 ## Description
 
@@ -15,22 +13,14 @@ A DatetimePicker like @angular/material [Datepicker](https://material.angular.io
 
 ## DEMO
 
-@see [LIVE DEMO AND DOCUMENTATION](https://h2qutc.github.io/angular-material-components/)
+@see [LIVE DEMO AND DOCUMENTATION](https://ckr-harsh.github.io/angular-material-components/)
 
 ![Alt Text](demo_datetime_picker.png)
-
-Choose the version corresponding to your Angular version:
-
-| Angular | @angular-material-components/datetime-picker |
-| ------- | -------------------------------------------- |
-| 19      | 19.x+                                        |
-| 18      | 18.x+                                        |
-| 17      | 17.x+                                        |
 
 ## Getting started
 
 ```sh
-npm install --save  @angular-material-components/datetime-picker
+npm i ngx-mat-datetime-picker-v2
 ```
 
 ## Setup
@@ -38,7 +28,7 @@ npm install --save  @angular-material-components/datetime-picker
 Basically the same way the @angular/material Datepicker is configured and imported.
 
 ```ts
-import { NgxMatDatetimePickerModule, NgxMatTimepickerComponent } from '@angular-material-components/datetime-picker';
+import { NgxMatDatetimePickerModule, NgxMatTimepickerComponent } from 'ngx-mat-datetime-picker-v2';
 @NgModule({
    ...
    imports: [
