@@ -51,6 +51,11 @@ jobs:
         run: npm run build -- --configuration=production
         env:
           NODE_OPTIONS: --openssl-legacy-provider  # Only needed for Node.js 17+
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'dist/angular-material-components'  # Update this to your Angular dist folder
 
   # Deployment job
   deploy:
