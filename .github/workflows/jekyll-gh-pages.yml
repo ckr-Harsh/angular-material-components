@@ -55,8 +55,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/angular-material-components'  # Update this to your Angular dist folder
-
+          path: |
+            _site/
+            dist/angular-material-components/
+          name: deployment
   # Deployment job
   deploy:
     environment:
