@@ -48,15 +48,22 @@ jobs:
         run: npm i --legacy-peer-deps
 
       - name: Build Angular app
-        run: npm run build -- --configuration=production
+        run: npm run build -- --configuration=production --base-href=/angular-material-components/
         env:
-          NODE_OPTIONS: --openssl-legacy-provider  # Only needed for Node.js 17+
-          
+          NODE_OPTIONS: --openssl-legacy-provider
+
+      - name: Verify build output
+        run: ls -la dist/angular-material-components/browser/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '/home/runner/work/angular-material-components/angular-material-components/dist/angular-material-components'
+          path: 'dist/angular-material-components/browser'
           name: deployment
+
   # Deployment job
   deploy:
     environment:
