@@ -55,9 +55,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: |
-            _site/
-            dist/angular-material-components/
+          path: '/home/runner/work/angular-material-components/angular-material-components/dist/angular-material-components'
           name: deployment
   # Deployment job
   deploy:
