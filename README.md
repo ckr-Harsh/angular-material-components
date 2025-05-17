@@ -1,4 +1,4 @@
-# Angular Material Extra Components (DatetimePicker, TimePicker, ColorPicker, FileInput ...) for @angular/material 17.x, 18.x, 19.x
+# Angular Material Extra Components (DatetimePicker) for @angular/material 17.x, 18.x, 19.x
 
 [![License](https://img.shields.io/npm/l/angular-material-components.svg)](https://www.npmjs.com/package/angular-material-components)
 
@@ -6,9 +6,9 @@
 
 **This is a cloned/forked version of an existing pkg by :- [hqho](https://github.com/h2qutc)**
 
-- Only changes in this version is that it supports latest angular versions.
+- Updated the peer and core dependencies of angular.
 
-Angular Material Library provide extra components for every project (Datetime picker, Time picker, Color picker...).
+Angular Material Library provide extra components for every project (Datetime picker).
 
 ## DEMO Angular Material Components
 
@@ -17,7 +17,6 @@ Angular Material Library provide extra components for every project (Datetime pi
 ### Datetime Picker
 
 [![npm version](https://badge.fury.io/js/ngx-mat-datetime-picker-v2.svg)](https://www.npmjs.com/package/ngx-mat-datetime-picker-v2)
-[![Github All Releases](https://img.shields.io/npm/dt/ngx-mat-datetime-picker-v2.svg)]()
 
 [TUTORIAL HERE](https://h2qutc.github.io/angular-material-components/)
 

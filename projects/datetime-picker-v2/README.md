@@ -9,7 +9,7 @@ A DatetimePicker like @angular/material [Datepicker](https://material.angular.io
 
 **This is a cloned/forked version of an [existing pkg](https://www.npmjs.com/package/@angular-material-components/datetime-picker) by :- [hqho](https://github.com/h2qutc)**
 
-- Only changes in this version is that it supports latest angular versions.
+-Updated the peer and core dependencies of angular.
 
 ## DEMO
 
