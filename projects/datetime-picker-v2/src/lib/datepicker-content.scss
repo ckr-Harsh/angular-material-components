@@ -24,6 +24,11 @@ $touch-max-height: 815px;
 .mat-datepicker-content {
   display: block;
   border-radius: 4px;
+  border-radius: 4px;
+  background: var(--mat-menu-container-color, white);
+  color: var(--mat-menu-container-text-color, rgba(0, 0, 0, 0.87));
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
 
   .mat-calendar {
     width: $non-touch-calendar-width;

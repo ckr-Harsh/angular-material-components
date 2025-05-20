@@ -125,6 +125,7 @@ export const NGX_MAT_DATEPICKER_SCROLL_STRATEGY_FACTORY_PROVIDER = {
     "[class.mat-primary]": 'color === "primary"',
     "[class.mat-accent]": 'color === "accent"',
     "[class.mat-warn]": 'color === "warn"',
+    "[class.app-background]": "true",
     "[@transformPanel]": "_animationState",
     "(@transformPanel.start)": "_handleAnimationEvent($event)",
     "(@transformPanel.done)": "_handleAnimationEvent($event)",
