@@ -41,10 +41,8 @@
     class="mat-calendar-body-cell-container"
     [style.width]="_cellWidth"
     [style.paddingTop]="_cellPadding"
-    [class.mat-calendar-body-active]="_isSelected(item.compareValue)"
     [style.paddingBottom]="_cellPadding"
     [attr.data-mat-row]="rowIndex"
-    [attr.focusable]="_isActiveCell(rowIndex, colIndex) ? 'true' : 'false'"
     [attr.data-mat-col]="colIndex"
   >
     <button

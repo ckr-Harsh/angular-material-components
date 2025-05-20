@@ -45,7 +45,7 @@
         [stepMinute]="datepicker._stepMinute"
         [stepSecond]="datepicker._stepSecond"
         [(ngModel)]="_modelTime"
-        [color]="datepicker._color"
+        [color]="_color"
         [enableMeridian]="datepicker._enableMeridian"
         [disableMinute]="datepicker._disableMinute"
         (ngModelChange)="onTimeChanged($event)"
@@ -60,6 +60,7 @@
   <button
     type="button"
     mat-raised-button
+    [color]="_color"
     class="mat-datepicker-close-button"
     [class.cdk-visually-hidden]="!_closeButtonFocused"
     (focus)="_closeButtonFocused = true"

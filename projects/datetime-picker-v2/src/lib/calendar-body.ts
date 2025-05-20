@@ -203,7 +203,6 @@ export class NgxMatCalendarBody<D = any>
       return;
     }
 
-    console.log(cell);
     if (cell.enabled) {
       this.selectedValueChange.emit({ value: cell.value, event });
     }

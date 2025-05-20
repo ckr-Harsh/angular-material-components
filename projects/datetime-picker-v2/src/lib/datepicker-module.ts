@@ -31,6 +31,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { NgxMatTimepickerComponent } from "./timepicker.component";
+import { MatRippleModule } from "@angular/material/core";
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import { NgxMatTimepickerComponent } from "./timepicker.component";
     FormsModule,
     ReactiveFormsModule,
     NgxMatTimepickerComponent,
+    MatRippleModule,
   ],
   exports: [
     CdkScrollableModule,

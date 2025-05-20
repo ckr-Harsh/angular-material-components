@@ -106,8 +106,6 @@ export const NGX_MAT_DATEPICKER_SCROLL_STRATEGY_FACTORY_PROVIDER = {
   useFactory: NGX_MAT_DATEPICKER_SCROLL_STRATEGY_FACTORY,
 };
 
-// Boilerplate for applying mixins to MatDatepickerContent.
-
 /**
  * Component used as the content for the datepicker overlay. We use this instead of using
  * MatCalendar directly as the content so we can control the initial focus. This also gives us a
@@ -121,6 +119,9 @@ export const NGX_MAT_DATEPICKER_SCROLL_STRATEGY_FACTORY_PROVIDER = {
   styleUrls: ["datepicker-content.scss"],
   host: {
     class: "mat-datepicker-content",
+    "[class.mat-primary]": 'color === "primary"',
+    "[class.mat-accent]": 'color === "accent"',
+    "[class.mat-warn]": 'color === "warn"',
     "[@transformPanel]": "_animationState",
     "(@transformPanel.start)": "_handleAnimationEvent($event)",
     "(@transformPanel.done)": "_handleAnimationEvent($event)",
@@ -138,12 +139,16 @@ export const NGX_MAT_DATEPICKER_SCROLL_STRATEGY_FACTORY_PROVIDER = {
   standalone: false,
 })
 export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
-  implements OnInit, AfterViewInit, OnDestroy
+  implements OnInit, AfterViewInit, OnDestroy, OnChanges
 {
   private _subscriptions = new Subscription();
   private _model: NgxMatDateSelectionModel<S, D>;
   /** Reference to the internal calendar component. */
   @ViewChild(NgxMatCalendar) _calendar: NgxMatCalendar<D>;
+
+  // Add color property with default value
+  @Input() color: ThemePalette = "primary";
+  defaultColor: ThemePalette = "primary";
 
   /** Reference to the datepicker that created the overlay. */
   datepicker: NgxMatDatepickerBase<any, S, D>;
@@ -192,7 +197,7 @@ export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
   _modelTime: D | null;
 
   constructor(
-    elementRef: ElementRef,
+    public elementRef: ElementRef,
     private _changeDetectorRef: ChangeDetectorRef,
     private _globalModel: NgxMatDateSelectionModel<S, D>,
     private _dateAdapter: NgxMatDateAdapter<D>,
@@ -205,10 +210,38 @@ export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
     this._closeButtonText = intl.closeCalendarLabel;
   }
 
+  // Helper getter that returns the current color or default
+  get _color(): ThemePalette {
+    return this.color || this.defaultColor;
+  }
+
+  // Update the color and apply the appropriate classes
+  private _updateColor(newColor: ThemePalette | null): void {
+    const color = newColor || this.defaultColor;
+    const element = this.elementRef.nativeElement;
+
+    // Remove old color class
+    element.classList.remove(`mat-${this._color}`);
+
+    // Add new color class
+    if (color) {
+      element.classList.add(`mat-${color}`);
+    }
+
+    // Update the color property
+    (this as { color: ThemePalette }).color = color;
+  }
+
   ngOnInit() {
     this._animationState = this.datepicker.touchUi
       ? "enter-dialog"
       : "enter-dropdown";
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes["color"]) {
+      this._updateColor(changes["color"].currentValue);
+    }
   }
 
   ngAfterViewInit() {
@@ -217,6 +250,7 @@ export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
         this._changeDetectorRef.markForCheck();
       })
     );
+    // this._calendar.color = this.color;
     this._calendar.focusActiveCell();
   }
 
@@ -402,6 +436,7 @@ export abstract class NgxMatDatepickerBase<
     );
   }
   private _startAt: D | null;
+  _color: ThemePalette;
 
   /** The view that the calendar should start in. */
   @Input() startView: "month" | "year" | "multi-year" = "month";
@@ -413,13 +448,12 @@ export abstract class NgxMatDatepickerBase<
       this._color ||
       (this.datepickerInput
         ? this.datepickerInput.getThemePalette()
-        : undefined)
+        : "primary")
     );
   }
   set color(value: ThemePalette) {
     this._color = value;
   }
-  _color: ThemePalette;
 
   /**
    * Whether the calendar UI is in touch mode. In touch mode the calendar opens in a dialog rather
@@ -843,6 +877,7 @@ export abstract class NgxMatDatepickerBase<
   /** Forwards relevant values from the datepicker to the datepicker content inside the overlay. */
   protected _forwardContentValues(instance: NgxMatDatepickerContent<S, D>) {
     instance.datepicker = this;
+    instance.color = this._color;
     instance._dialogLabelId = this.datepickerInput.getOverlayLabelId();
     instance._assignActions(this._actionsPortal, false);
   }
