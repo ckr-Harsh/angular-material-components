@@ -20,6 +20,8 @@ import {
 import { SharedModule } from "../shared";
 import { DemoDatetimeComponent } from "./demo-datetime.component";
 import { MatTabsModule } from "@angular/material/tabs";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { provideNativeDateAdapter } from "@angular/material/core";
 
 const routes: Routes = [{ path: "", component: DemoDatetimeComponent }];
 
@@ -38,9 +40,11 @@ const routes: Routes = [{ path: "", component: DemoDatetimeComponent }];
     MatCardModule,
     SharedModule,
     MatFormFieldModule,
+    MatDatepickerModule,
     NgxMatDatetimePickerModule,
     RouterModule.forChild(routes),
   ],
   declarations: [DemoDatetimeComponent],
+  providers: [provideNativeDateAdapter()],
 })
 export class DemoDatetimeModule {}

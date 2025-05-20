@@ -57,11 +57,7 @@ import {
 import { ThemePalette } from "@angular/material/core";
 import { Observable, Subject, Subscription, merge } from "rxjs";
 import { filter, take } from "rxjs/operators";
-import { NgxMatCalendar, NgxMatCalendarView } from "./calendar";
-import {
-  NgxMatCalendarCellClassFunction,
-  NgxMatCalendarUserEvent,
-} from "./calendar-body";
+
 import { NgxMatDateAdapter } from "./core/date-adapter";
 import {
   NGX_MAT_DATE_RANGE_SELECTION_STRATEGY,
@@ -77,6 +73,13 @@ import { createMissingDateImplError } from "./datepicker-errors";
 import { NgxDateFilterFn } from "./datepicker-input-base";
 import { NgxMatDatepickerIntl } from "./datepicker-intl";
 import { DEFAULT_STEP } from "./utils/date-utils";
+import {
+  DateRange,
+  MatCalendar,
+  MatCalendarCellClassFunction,
+  MatCalendarUserEvent,
+  MatCalendarView,
+} from "@angular/material/datepicker";
 
 /** Used to generate a unique ID for each datepicker instance. */
 let datepickerUid = 0;
@@ -144,7 +147,7 @@ export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
   private _subscriptions = new Subscription();
   private _model: NgxMatDateSelectionModel<S, D>;
   /** Reference to the internal calendar component. */
-  @ViewChild(NgxMatCalendar) _calendar: NgxMatCalendar<D>;
+  @ViewChild(MatCalendar) _calendar: MatCalendar<D>;
 
   // Add color property with default value
   @Input() color: ThemePalette = "primary";
@@ -260,7 +263,7 @@ export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
   }
 
   onTimeChanged(selectedDateWithTime: D | null) {
-    const userEvent: NgxMatCalendarUserEvent<D | null> = {
+    const userEvent: MatCalendarUserEvent<D | null> = {
       value: selectedDateWithTime,
       event: null,
     };
@@ -268,7 +271,7 @@ export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
     this._updateUserSelectionWithCalendarUserEvent(userEvent);
   }
 
-  _handleUserSelection(event: NgxMatCalendarUserEvent<D | null>) {
+  _handleUserSelection(event: MatCalendarUserEvent<D | null>) {
     this._updateUserSelectionWithCalendarUserEvent(event);
 
     // Delegate closing the overlay to the actions.
@@ -280,11 +283,11 @@ export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
   }
 
   private _updateUserSelectionWithCalendarUserEvent(
-    event: NgxMatCalendarUserEvent<D | null>
+    event: MatCalendarUserEvent<D | null>
   ) {
     const selection = this._model.selection;
     const value = event.value;
-    const isRange = selection instanceof NgxDateRange;
+    const isRange = selection instanceof DateRange;
 
     // If we're selecting a range and we have a selection strategy, always pass the value through
     // there. Otherwise don't assign null values to the model, unless we're selecting a range.
@@ -315,7 +318,7 @@ export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
     }
   }
 
-  _handleUserDragDrop(event: NgxMatCalendarUserEvent<NgxDateRange<D>>) {
+  _handleUserDragDrop(event: MatCalendarUserEvent<DateRange<D>>) {
     this._model.updateSelection(event.value as unknown as S, this);
   }
 
@@ -334,7 +337,7 @@ export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
 
   _getSelected() {
     this._modelTime = this._model.selection as unknown as D;
-    return this._model.selection as unknown as D | NgxDateRange<D> | null;
+    return this._model.selection as unknown as D | DateRange<D> | null;
   }
 
   /** Applies the current pending selection to the global model. */
@@ -531,11 +534,11 @@ export abstract class NgxMatDatepickerBase<
   /**
    * Emits when the current view changes.
    */
-  @Output() readonly viewChanged: EventEmitter<NgxMatCalendarView> =
-    new EventEmitter<NgxMatCalendarView>(true);
+  @Output() readonly viewChanged: EventEmitter<MatCalendarView> =
+    new EventEmitter<MatCalendarView>(true);
 
   /** Function that can be used to add custom CSS classes to dates. */
-  @Input() dateClass: NgxMatCalendarCellClassFunction<D>;
+  @Input() dateClass: MatCalendarCellClassFunction<D>;
 
   /** Emits when the datepicker has been opened. */
   @Output("opened") readonly openedStream = new EventEmitter<void>();
@@ -741,7 +744,7 @@ export abstract class NgxMatDatepickerBase<
   }
 
   /** Emits changed view */
-  _viewChanged(view: NgxMatCalendarView): void {
+  _viewChanged(view: MatCalendarView): void {
     this.viewChanged.emit(view);
   }
 

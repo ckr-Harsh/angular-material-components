@@ -3,8 +3,6 @@ import { OverlayModule } from "@angular/cdk/overlay";
 import { PortalModule } from "@angular/cdk/portal";
 import { CdkScrollableModule } from "@angular/cdk/scrolling";
 import { MatButtonModule } from "@angular/material/button";
-import { NgxMatCalendar, NgxMatCalendarHeader } from "./calendar";
-import { NgxMatCalendarBody } from "./calendar-body";
 import { NgxMatDateRangeInput } from "./date-range-input";
 import { NgxMatEndDate, NgxMatStartDate } from "./date-range-input-parts";
 import { NgxMatDateRangePicker } from "./date-range-picker";
@@ -24,14 +22,12 @@ import {
   NgxMatDatepickerToggleIcon,
   NgxMatDatepickerToggle,
 } from "./datepicker-toggle";
-import { NgxMatMonthView } from "./month-view";
-import { NgxMatMultiYearView } from "./multi-year-view";
-import { NgxMatYearView } from "./year-view";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { NgxMatTimepickerComponent } from "./timepicker.component";
 import { MatRippleModule } from "@angular/material/core";
+import { MatDatepickerModule } from "@angular/material/datepicker";
 
 @NgModule({
   imports: [
@@ -44,20 +40,15 @@ import { MatRippleModule } from "@angular/material/core";
     ReactiveFormsModule,
     NgxMatTimepickerComponent,
     MatRippleModule,
+    MatDatepickerModule,
   ],
   exports: [
     CdkScrollableModule,
-    NgxMatCalendar,
-    NgxMatCalendarBody,
     NgxMatDatetimepicker,
     NgxMatDatepickerContent,
     NgxMatDatepickerInput,
     NgxMatDatepickerToggle,
     NgxMatDatepickerToggleIcon,
-    NgxMatMonthView,
-    NgxMatYearView,
-    NgxMatMultiYearView,
-    NgxMatCalendarHeader,
     NgxMatDateRangeInput,
     NgxMatStartDate,
     NgxMatEndDate,
@@ -68,17 +59,11 @@ import { MatRippleModule } from "@angular/material/core";
     NgxMatTimepickerComponent,
   ],
   declarations: [
-    NgxMatCalendar,
-    NgxMatCalendarBody,
     NgxMatDatetimepicker,
     NgxMatDatepickerContent,
     NgxMatDatepickerInput,
     NgxMatDatepickerToggle,
     NgxMatDatepickerToggleIcon,
-    NgxMatMonthView,
-    NgxMatYearView,
-    NgxMatMultiYearView,
-    NgxMatCalendarHeader,
     NgxMatDateRangeInput,
     NgxMatStartDate,
     NgxMatEndDate,

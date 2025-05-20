@@ -8,7 +8,7 @@
   [class.mat-datepicker-content-container-with-actions]="_actionsPortal"
   [class.mat-datepicker-content-container-with-time]="!datepicker._hideTime"
 >
-  <ngx-mat-calendar
+  <mat-calendar
     [id]="datepicker.id"
     [ngClass]="datepicker.panelClass"
     [startAt]="datepicker.startAt"
@@ -29,7 +29,7 @@
     (viewChanged)="datepicker._viewChanged($event)"
     (_userSelection)="_handleUserSelection($event)"
     (_userDragDrop)="_handleUserDragDrop($event)"
-  ></ngx-mat-calendar>
+  ></mat-calendar>
 
   <ng-container *ngIf="isViewMonth">
     <div
