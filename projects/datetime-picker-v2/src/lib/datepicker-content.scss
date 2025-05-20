@@ -59,7 +59,6 @@ $touch-max-height: 815px;
 
   // Ensures that `mat-datepicker-actions` is pushed to the bottom of the popup.
   justify-content: space-between;
-  background: darken($color: #fff, $amount: 5);
   border-radius: 6px;
   margin-top: 0.2rem;
 }
