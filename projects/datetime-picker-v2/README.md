@@ -15,7 +15,7 @@ A DatetimePicker like @angular/material [Datepicker](https://material.angular.io
 
 <!-- @see [LIVE DEMO AND DOCUMENTATION](https://ckr-harsh.github.io/angular-material-components/) -->
 
-![Alt Text](demo_datetime_picker.png)
+![Alt Text](date-time-picker.png)
 
 ## Getting started
 
