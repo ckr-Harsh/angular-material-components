@@ -1,24 +1,24 @@
 # Angular Material Extra Components (DatetimePicker) for @angular/material 17.x, 18.x, 19.x
 
-[![License](https://img.shields.io/npm/l/angular-material-components.svg)](https://www.npmjs.com/package/angular-material-components)
+<!-- [![License](https://img.shields.io/npm/l/angular-material-components.svg)](https://www.npmjs.com/package/angular-material-components) -->
 
 ## Description
 
-**This is a cloned/forked version of an existing pkg by :- [hqho](https://github.com/h2qutc)**
+**Compatible with and is built on top of an [existing pkg](https://www.npmjs.com/package/@angular-material-components/datetime-picker) by :- [hqho](https://github.com/h2qutc)**
 
 - Updated the peer and core dependencies of angular.
 
 Angular Material Library provide extra components for every project (Datetime picker).
 
-## DEMO Angular Material Components
+<!-- ## DEMO Angular Material Components
 
-@see [LIVE DEMO AND DOCUMENTATION](https://h2qutc.github.io/angular-material-components/)
+@see [LIVE DEMO AND DOCUMENTATION](https://h2qutc.github.io/angular-material-components/) -->
 
 ### Datetime Picker
 
 [![npm version](https://badge.fury.io/js/ngx-mat-datetime-picker-v2.svg)](https://www.npmjs.com/package/ngx-mat-datetime-picker-v2)
 
-[TUTORIAL HERE](https://h2qutc.github.io/angular-material-components/)
+<!-- [TUTORIAL HERE](https://h2qutc.github.io/angular-material-components/) -->
 
 ```
 npm install --save  ngx-mat-datetime-picker-v2
