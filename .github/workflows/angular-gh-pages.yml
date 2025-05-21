@@ -1,8 +1,8 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+# Workflow for building and deploying an Angular app to GitHub Pages
+name: Deploy Angular app to GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Runs on pushes targeting the master branch
   push:
     branches: ["master"]
 
@@ -22,38 +22,26 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    # Steps will be added in the next plan step
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'  # Use the Node.js version you need
+          node-version: '20.x'
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm i --legacy-peer-deps
+        run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --configuration=production --base-href=/angular-material-components/
+        run: npm run build:ci
         env:
           NODE_OPTIONS: --openssl-legacy-provider
-
-      - name: Verify build output
-        run: ls -la dist/angular-material-components/browser/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -61,17 +49,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/angular-material-components/browser'
-          name: deployment
+          path: 'docs' # Ensure this uploads the 'docs' folder
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
