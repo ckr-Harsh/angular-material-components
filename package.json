@@ -33,7 +33,7 @@
     "build:moment-adapter-v2": "ng build NgxMatMomentAdapter",
     "build:color-picker-v2": "ng build NgxMatColorPicker",
     "build:file-input-v2": "ng build NgxMatFileInput",
-    "publish:datetime-picker-v2": "ng build NgxMatDatetimePicker && cd dist/@angular-material-components/datetime-picker-v2 && npm publish --access public && cd .. && cd .. && cd ..",
+    "publish:datetime-picker-v2": "ng build NgxMatDatetimePicker && cd dist/angular-datetime-picker && npm publish --access public && cd .. && cd .. && cd ..",
     "publish:moment-adapter-v2": "ng build NgxMatMomentAdapter && cd dist/@angular-material-components/moment-adapter-v2 && npm publish --access public  && cd .. && cd .. && cd ..",
     "publish:color-picker-v2": "ng build NgxMatColorPicker && cd dist/@angular-material-components/color-picker-v2 && npm publish --access public  && cd .. && cd .. && cd ..",
     "publish:file-input-v2": "ng build NgxMatFileInput && cd dist/@angular-material-components/file-input-v2 && npm publish --access public  && cd .. && cd .. && cd ..",
@@ -41,7 +41,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "codecov": "codecov",
-    "build:ci": "ng build -c=production --output-path docs --base-href https://h2qutc.github.io/angular-material-components/"
+    "build:ci": "ng build -c=production --output-path docs --base-href https://ckr-harsh.github.io/angular-material-components/"
   },
   "private": false,
   "dependencies": {
